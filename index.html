@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OOP-JS</title>
+    <script
+      src="https://kit.fontawesome.com/a3a1289b47.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/js/script.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <button class="btn displayContainer">Colors</button>
+      <button class="btn displayCardGame">Card Game</button>
+    </nav>
+    <section class="gameRules-Container">
+      <div class="gameRules hidden"></div>
+    </section>
+    <section class="colorContainer hidden">
+      <div class="btns">
+        <button class="btn btn-randomColor">
+          <i class="fa-solid fa-paint-roller"></i>
+          <span>Random rgb Color</span>
+        </button>
+        <button class="btn btn-rgba">
+          <i class="svg fa-sharp fa-solid fa-paint-roller"></i>
+          <span>Random rgba Color</span>
+        </button>
+        <button class="btn btn-hexConvert">
+          <i class="svg fa-sharp fa-solid fa-arrow-down"></i>
+          <span>Hex-Color Converter</span>
+        </button>
+        <table>
+          <tr>
+            <th class="thColor thRed">Red</th>
+            <th class="thColor thGreen">Green</th>
+            <th class="thColor thBlue">Blue</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="range" min="0" max="255" value="255" id="redColor" />
+            </td>
+            <td>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="255"
+                id="greenColor"
+              />
+            </td>
+            <td>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="255"
+                id="blueColor"
+              />
+            </td>
+          </tr>
+          <tr class="rgbNum">
+            <td id="red-label"><span class="nums">255</span></td>
+            <td id="green-label"><span class="nums">255</span></td>
+            <td id="blue-label"><span class="nums">255</span></td>
+          </tr>
+        </table>
+        <h1 id="hex-label">#</h1>
+      </div>
+    </section>
+    <section class="main hidden">
+      <div class="table">
+        <i class="fa-brands fa-android"></i>
+        <div class="displayDeckContainer">
+          <div class="computer-deck deck"></div>
+          <div class="computer-slot card-slot"></div>
+          <div class="text"></div>
+          <div class="player-deck deck"></div>
+          <div class="player-slot card-slot"></div>
+        </div>
+        <div><button class="btn playBtn">Play</button></div>
+        <i class="fa-solid fa-circle-user"></i>
+      </div>
+    </section>
+  </body>
+</html>
