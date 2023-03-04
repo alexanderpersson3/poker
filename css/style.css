@@ -1,0 +1,262 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+:root {
+  --color-primary: #f38e82;
+  --color-grad-2: #f48982;
+  --color-items: #fbdb89;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p,
+span,
+#red-label,
+#green-label,
+#blue-label,
+#alpha-label,
+.thColor {
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-items);
+}
+#totalPot {
+  margin: 0;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-items);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em 1em;
+  box-shadow: 0px 0px 5px 1px var(--color-items);
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.colorContainer {
+  display: flex;
+  justify-content: center;
+}
+.btns {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+#hex-label {
+  display: flex;
+  justify-content: center;
+  color: yellow;
+}
+.fa-arrow-down,
+.fa-paint-roller {
+  font-size: 2rem;
+}
+.nums {
+  font-size: 1.2rem;
+}
+.btn:active {
+  zoom: 101%;
+}
+.thRed {
+  color: red;
+}
+.thGreen {
+  color: green;
+}
+
+.thBlue {
+  color: blue;
+}
+.thOpacity {
+  color: white;
+}
+.fa-copy {
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+.deck {
+  height: 100%;
+  width: 8rem;
+  /* border: 5px solid white; */
+  box-shadow: 0px 0px 2px 4px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: 0.5rem;
+  color: white;
+  user-select: none;
+  margin: 0;
+}
+
+.computer-deck {
+  display: flex;
+  flex-direction: column;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    #8c4141,
+    #361a90 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.computer-deck::before {
+  content: 'AI Deck';
+  font-size: 1.5rem;
+}
+
+.player-deck {
+  display: flex;
+  flex-direction: column;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    -360deg,
+    #8c4141,
+    #361a90 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  margin-left: 0.5rem;
+}
+.player-deck::before {
+  content: 'Player Deck';
+  font-size: 1.5rem;
+}
+
+.text {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: wheat;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.card.red {
+  color: red;
+  width: 8rem;
+  margin: 0 1rem;
+}
+
+.card.black {
+  color: black;
+  width: 8rem;
+  margin: 0 1rem;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: attr(data-value);
+  font-size: 1.8rem;
+}
+
+.card::before {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.card::after {
+  bottom: 0.5rem;
+  right: 0.5rem;
+  transform: rotate(180deg);
+}
+.table {
+  background-color: #361a90;
+  height: 60vh;
+  width: 70vw;
+  border-radius: 1rem;
+  margin: 0 auto;
+  border: 1em solid #8c4141;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 3;
+}
+.main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+.displayDeckContainer {
+  display: flex;
+  /* flex-direction: column; */
+  width: fit-content;
+  height: 50%;
+}
+.playBtn {
+  margin: 1rem 0rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.gameRules {
+  box-shadow: 0px 0px 5px 5px;
+  width: fit-content;
+  border-radius: 1rem;
+}
+.textRules .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.textRules {
+  width: 35rem;
+}
+.textRules li {
+  list-style: decimal;
+  color: var(--color-items);
+}
+.gameRules-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+.fa-android {
+  font-size: 3rem;
+  margin: 1rem 0rem;
+  color: #cec4b1;
+}
+.fa-circle-user {
+  font-size: 3rem;
+  margin: 1rem 0rem;
+  color: #cec4b1;
+}
